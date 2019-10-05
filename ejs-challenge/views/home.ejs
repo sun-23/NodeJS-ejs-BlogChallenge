@@ -1,0 +1,10 @@
+<%- include("partails/header") -%>
+<h1>Home</h1>
+<p> <%= startingContent %></p>
+
+<% posts.forEach(function(post){ %>
+   <h1><%= post.composeTitle %></h1>             <!-- href to app.get('/posts/:postName',..) -->
+   <p><%= post.composeBody.substring(0,100)%> ... <a href="posts/<%= post.composeTitle %>">Read More</a></p>
+<% }) %>
+
+<%- include("partails/footer") -%>
